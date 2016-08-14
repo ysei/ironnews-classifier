@@ -1,5 +1,5 @@
 
-# 多層パーセプトロンネットワークによるカテゴリ分類器
+# $BB?AX%Q!<%;%W%H%m%s%M%C%H%o!<%/$K$h$k%+%F%4%jJ,N`4o(B
 
 $: << File.join(File.dirname(__FILE__), "..")
 require "mlp_classifier"
