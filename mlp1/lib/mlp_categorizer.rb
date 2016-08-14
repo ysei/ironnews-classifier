@@ -44,7 +44,9 @@ class MlpCategorizer
       memo[feature_id] = 1.0
       memo
     }
+#   category_dictionary = @category_dictionary.dup
     target_values = @category_dictionary.ids.inject({}) { |memo, id|
+#   target_values = category_dictionary.ids.inject({}) { |memo, id|
       memo[id] = 0.0
       memo
     }
@@ -64,6 +66,7 @@ class MlpCategorizer
     output_values = @classifier.feedforward(input_values)
     category_values = @category_dictionary.decode_multiple(output_values)
     return category_values
+#   @category_dictionary.decode_multiple(output_values)
   end
 
   def categorize(document, thresholds = {})
@@ -78,6 +81,7 @@ class MlpCategorizer
       return first_category
     else
       return nil
+#     nil
     end
   end
 end
